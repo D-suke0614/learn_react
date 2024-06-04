@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang='ja'>
       <body className={inter.className}>
         <Header />
-        {children}
+        <main className='p-8 flex justify-center overflow-y-hidden'>{children}</main>
       </body>
     </html>
   )
