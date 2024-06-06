@@ -20,4 +20,4 @@ Reactアプリ100本ノックになぞらえて、各ページにそれぞれの
 
 ## 開発済みのアプリ一覧
 
-`[sample](sample.vercel)`の形式で追加していく
+`[TODO APP](https://learn-react-ten-dun.vercel.app/todo)`
