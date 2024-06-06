@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Header from './components/Header'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -15,8 +16,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en'>
-      <body className={inter.className}>{children}</body>
+    <html lang='ja'>
+      <body className={inter.className}>
+        <Header />
+        <main className='p-8 flex justify-center overflow-y-hidden'>{children}</main>
+      </body>
     </html>
   )
 }
