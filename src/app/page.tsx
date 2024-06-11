@@ -9,6 +9,11 @@ export default function Home() {
             TODO APP
           </Link>
         </li>
+        <li className='mb-5'>
+          <Link className='py-2 hover:opacity-60' href={'/timer'}>
+            TIMER APP
+          </Link>
+        </li>
       </ul>
     </div>
   )
