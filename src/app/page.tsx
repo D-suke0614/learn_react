@@ -3,6 +3,7 @@ import Link from 'next/link'
 const APPS = [
   { name: 'TODO APP', link: '/todo' },
   { name: 'CALC APP', link: '/calc' },
+  { name: 'PROFILE APP', link: '/profile' },
 ]
 
 export default function Home() {
