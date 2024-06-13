@@ -4,22 +4,47 @@ import { useState } from 'react'
 import Buttons from './components/Buttons'
 
 const Page = () => {
-  const [displayNum, setDisplayNum] = useState<number | string>(0)
-  // const [clickedButtons, setClickedButton] = useState<string[] | number[]>([])
-  // const handleClickedButton = (clickedButton: string | number) => {
-  //   setClickedButton([...clickedButtons, clickedButton])
-  // }
+  const [displayNum, setDisplayNum] = useState<string>('0')
+  const calculation = (splitInputValue: string[]): number | string => {
+    const ope = splitInputValue[1]
+    const left = Number(splitInputValue[0])
+    const right = Number(splitInputValue[2])
+    switch (ope) {
+      case '+':
+        return left + right
+      case '-':
+        return left - right
+      case '*':
+        return left * right
+      case '/':
+        return left / right
+      case '%':
+        return left % right
+    }
+    return 'Error'
+  }
+
   const handleDisplayNum = (clickedButton: string) => {
     if (clickedButton === 'C' || clickedButton === 'AC') {
-      setDisplayNum(0)
+      setDisplayNum('0')
     } else {
-      if (displayNum === 0) {
-        const symbols = ['%', '/', '*', '-', '+', '=', '0']
-        const newDisplayNum = symbols.includes(clickedButton) ? 0 : clickedButton
+      if (displayNum === '0') {
+        const invalidValues = ['%', '/', '*', '-', '+', '=', '0']
+        const newDisplayNum = invalidValues.includes(clickedButton) ? '0' : clickedButton
         setDisplayNum(newDisplayNum)
       } else {
-        const newDisplayNum = `${displayNum} ${clickedButton}`
-        setDisplayNum(newDisplayNum)
+        if (clickedButton === '=') {
+          const inputValue = displayNum
+          const splitInputValue = inputValue.split(' ')
+          const result = calculation(splitInputValue)
+          setDisplayNum(result?.toString())
+        } else {
+          const number = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.']
+          const newDisplayNum = number.includes(clickedButton)
+            ? `${displayNum}${clickedButton}`
+            : `${displayNum} ${clickedButton} `
+          setDisplayNum(newDisplayNum)
+        }
       }
     }
   }
