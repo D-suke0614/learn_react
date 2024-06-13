@@ -2,11 +2,13 @@
 
 type PropsType = {
   label: number | string
+  handleButtonClick: (value: string) => void
 }
 
-const Button = ({ label }: PropsType) => {
+const Button = ({ label, handleButtonClick }: PropsType) => {
   const handleClick = (e: any) => {
     const value = e.currentTarget.value
+    handleButtonClick(value)
   }
 
   return (
