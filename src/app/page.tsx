@@ -1,17 +1,22 @@
 import Link from 'next/link'
 
+const APPS = [
+  { name: 'TODO APP', link: '/todo' },
+  { name: 'CALC APP', link: '/calc' },
+  { name: 'PROFILE APP', link: '/profile' },
+]
+
 export default function Home() {
   return (
     <div>
       <ul className='text-lg font-medium'>
-        <li className='mb-5'>
-          <Link className='py-2 hover:opacity-60' href={'/todo'}>
-            TODO APP
-          </Link>
-          <Link className='py-2 hover:opacity-60' href={'/profile'}>
-            PROFILE APP
-          </Link>
-        </li>
+        {APPS.map((app) => (
+          <li key={app.link} className='mb-5 list-disc'>
+            <Link className='py-2 hover:opacity-60' href={app.link}>
+              {app.name}
+            </Link>
+          </li>
+        ))}
       </ul>
     </div>
   )
