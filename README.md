@@ -20,4 +20,5 @@ Reactアプリ100本ノックになぞらえて、各ページにそれぞれの
 
 ## 開発済みのアプリ一覧
 
-`[TODO APP](https://learn-react-ten-dun.vercel.app/todo)`
+`[1.TODO APP](https://learn-react-ten-dun.vercel.app/todo)`
+`[2.PROFILE APP](https://learn-react-ten-dun.vercel.app/profile)`

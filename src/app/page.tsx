@@ -8,6 +8,9 @@ export default function Home() {
           <Link className='py-2 hover:opacity-60' href={'/todo'}>
             TODO APP
           </Link>
+          <Link className='py-2 hover:opacity-60' href={'/profile'}>
+            PROFILE APP
+          </Link>
         </li>
       </ul>
     </div>
