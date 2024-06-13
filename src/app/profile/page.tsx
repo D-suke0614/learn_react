@@ -22,6 +22,17 @@ const Page = () => {
     setProfileData({ ...profileData, [id]: value })
   }
 
+  const handleDownload = () => {
+    if (!profileData.image) return
+    const image = profileData.image
+    const link = document.createElement('a')
+    link.href = image
+    link.download = 'profile_image.png'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+
   return (
     <div>
       <h2 className='text-3xl font-bold text-center'>プロフィール自動生成</h2>
@@ -32,7 +43,11 @@ const Page = () => {
           <Input id='birthday' type='date' label='お誕生日' handleChange={handleChange} />
           <Input id='phone' type='text' label='電話番号' handleChange={handleChange} />
           <Input id='image' type='file' label='プロフィール写真' handleChange={handleChange} />
-          <button className='w-full bg-emerald-400 rounded-md py-3 text-white' type='button'>
+          <button
+            className='w-full bg-emerald-400 rounded-md py-3 text-white'
+            type='button'
+            onClick={handleDownload}
+          >
             Download as PNG
           </button>
         </div>
