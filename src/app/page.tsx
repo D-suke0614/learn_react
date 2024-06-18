@@ -4,6 +4,7 @@ const APPS = [
   { name: 'TODO APP', link: '/todo' },
   { name: 'CALC APP', link: '/calc' },
   { name: 'PROFILE APP', link: '/profile' },
+  { name: 'WEATHER APP', link: '/weather' },
 ]
 
 export default function Home() {
