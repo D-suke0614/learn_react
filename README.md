@@ -20,10 +20,10 @@ Reactアプリ100本ノックになぞらえて、各ページにそれぞれの
 
 ## 開発済みのアプリ一覧
 
-[1.TODO APP](https://learn-react-ten-dun.vercel.app/todo){:target='_blank}
+[1.TODO APP](https://learn-react-ten-dun.vercel.app/todo)
 
-[2.CALC APP](https://learn-react-ten-dun.vercel.app/calc){:target='_blank}
+[2.CALC APP](https://learn-react-ten-dun.vercel.app/calc)
 
-[3.PROFILE APP](https://learn-react-ten-dun.vercel.app/profile){:target='_blank}
+[3.PROFILE APP](https://learn-react-ten-dun.vercel.app/profile)
 
-[3.WEATHER APP](https://learn-react-ten-dun.vercel.app/weather){:target='_blank}
+[3.WEATHER APP](https://learn-react-ten-dun.vercel.app/weather)
